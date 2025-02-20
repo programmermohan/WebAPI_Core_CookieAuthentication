@@ -30,6 +30,7 @@ namespace CookieAuthentication_CoreWebAPI.Controllers
                        new Claim(ClaimTypes.Name, user.Username),
                         new Claim(ClaimTypes.Role, user.Rolename),
                         new Claim(ClaimTypes.NameIdentifier, user.UserID.ToString())
+                        //We can add multiple claim, whatever we want, based on our requirement
                     };
 
                     var claimsIdentity = new ClaimsIdentity(claim, CookieAuthenticationDefaults.AuthenticationScheme);
